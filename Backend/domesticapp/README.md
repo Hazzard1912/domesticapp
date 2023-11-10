@@ -9,3 +9,5 @@ Para instalar las dependencias del proyecto, primero asegúrate de tener un ento
 ```bash
 pip install -r requirements.txt
 ```
+
+esto instalara django y las librerias que son dependencias del proyecto.
