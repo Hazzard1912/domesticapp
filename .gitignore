@@ -1,0 +1,25 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales de Python
+venv/
+*.pyc
+__pycache__/
+
+# Archivos de base de datos
+data/db
+
+# Archivos de configuración
+*.env
+
+# Archivos de Django
+*.log
+staticfiles/
+media/
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
