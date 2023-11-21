@@ -73,56 +73,84 @@ export const RegisterWorkerPage = () => {
         }}
       >
         <Form className="card-body">
-          <div className="form-control w-full">
+          <div className="form-control w-full flex gap-4">
             <Field
               className="input input-bordered w-full"
               name="firstName"
               type="text"
               placeholder="First Name"
             />
-            <ErrorMessage name="firstName" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="firstName"
+              component="div"
+            />
             <Field
               className="input input-bordered w-full"
               name="lastName"
               type="text"
               placeholder="Last Name"
             />
-            <ErrorMessage name="lastName" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="lastName"
+              component="div"
+            />
             <Field
               className="input input-bordered w-full"
               name="email"
               type="text"
               placeholder="Email"
             />
-            <ErrorMessage name="email" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="email"
+              component="div"
+            />
             <Field
               className="file-input file-input-bordered w-full"
               name="profilePic"
               type="file"
               accept=".jpg,.jpeg,.png"
             />
-            <ErrorMessage name="profilePic" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="profilePic"
+              component="div"
+            />
             <Field
               className="input input-bordered w-full"
               name="phone"
               type="text"
               placeholder="Phone"
             />
-            <ErrorMessage name="phone" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="phone"
+              component="div"
+            />
             <Field
               className="input input-bordered w-full"
               name="address"
               type="text"
               placeholder="Address"
             />
-            <ErrorMessage name="address" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="address"
+              component="div"
+            />
             <Field
               className="file-input file-input-bordered w-full"
               name="idImg"
               type="file"
               accept=".jpg,.jpeg,.png"
             />
-            <ErrorMessage name="idImg" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="idImg"
+              component="div"
+            />
             <Field className="select select-bordered" as="select" name="job">
               <option value="">Select a job</option>
               {labores.map((labor) => (
@@ -131,7 +159,11 @@ export const RegisterWorkerPage = () => {
                 </option>
               ))}
             </Field>
-            <ErrorMessage name="job" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="job"
+              component="div"
+            />
             <Field
               className="input input-bordered w-full"
               name="price"
@@ -139,16 +171,22 @@ export const RegisterWorkerPage = () => {
               min="0"
               placeholder="Price in COP"
             />
-            <ErrorMessage name="price" component="div" />
-            <button type="submit" className="btn btn-outline btn-primary">
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="price"
+              component="div"
+            />
+            <button type="submit" className="btn btn-outline btn-primary text-xl">
               Register
             </button>
           </div>
         </Form>
       </Formik>
-      <p>
-        return to login <Link to="/auth/login">Login</Link>
-      </p>
+      <div className="mt-6 text-center">
+        <p className="text-xl">
+          return to login <Link to="/auth/login" className="font-medium text-indigo-400 hover:text-indigo-200">Login</Link>
+        </p>
+      </div>
     </AuthLayout>
   );
 };

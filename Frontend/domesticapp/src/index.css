@@ -11,6 +11,14 @@ html {
   font-size: 62.5%;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
 :root {
   line-height: 1.5;
   font-weight: 400;

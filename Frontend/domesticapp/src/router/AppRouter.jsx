@@ -2,9 +2,9 @@ import { useSelector } from "react-redux";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { DomesticAppRoutes } from "../domesticapp/routes/DomesticAppRoutes";
 import { AuthRoutes } from "../auth/routes/AuthRoutes";
+import { LoginPage } from "../auth/pages";
 
 export const AppRouter = () => {
-
   const { status } = useSelector((state) => state.user);
 
   return (

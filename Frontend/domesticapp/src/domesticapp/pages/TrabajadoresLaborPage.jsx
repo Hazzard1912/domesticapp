@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { ListaTrabajadores } from "../components/ListaTrabajadores";
 import { useEffect, useState } from "react";
+import { DomesticAppLayout } from "../layout/DomesticAppLayout";
 
 export const TrabajadoresLaborPage = () => {
-  // Recibimos el id de la labor a cargar y se lo pasamos a ListaTrabajadores
   const { id } = useParams();
 
   // Usaremos el filtrado de datos aqui, ya que este componente le pasara los trabajadores ya rankeados a ListaTrabajadores
@@ -59,16 +59,33 @@ export const TrabajadoresLaborPage = () => {
     ];
 
     setTrabajadores(listaTrabajadores);
-
   }, [criterio]);
 
   return (
-    <>
-      <h1>TrabajadoresLaborPage: Labor {id}</h1>
-      <button onClick={() => setCriterio('rating')}>Clasificar por rating - </button>
-      <button onClick={() => setCriterio('distancia')}>Clasificar por menor distancia - </button>
-      <button onClick={() => setCriterio('precio')}>Clasificar por precio</button>
-      <ListaTrabajadores trabajadores={trabajadores} />
-    </>
+    <DomesticAppLayout>
+      <div className="min-h-screen p-4 bg-gray-200">
+        <div className="w-full max-w-6xl mx-auto flex flex-col justify-center">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-sky-600 mb-8 text-center">
+            Labor {id}
+          </h1>
+          <div role="tablist" className="tabs tabs-bordered">
+            <a role="tab" className={`tab text-xl text-slate-600 capitalize ${criterio === "rating" ? "tab-active" : ""}`} onClick={() => setCriterio("rating")}>
+              Mejor rating
+            </a>
+            <a
+              role="tab"
+              className={`tab text-xl text-slate-600 capitalize ${criterio === "distancia" ? "tab-active" : ""}`}
+              onClick={() => setCriterio("distancia")}
+            >
+              Menor distancia
+            </a>
+            <a role="tab" className={`tab text-xl text-slate-600 capitalize ${criterio === "precio" ? "tab-active" : ""}`} onClick={() => setCriterio("precio")}>
+              Mejor precio
+            </a>
+          </div>
+          <ListaTrabajadores trabajadores={trabajadores} />
+        </div>
+      </div>
+    </DomesticAppLayout>
   );
 };

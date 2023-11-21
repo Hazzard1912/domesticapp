@@ -38,9 +38,7 @@ const trabajadores = [
   },
 ];
 
-
 export const ListaLabores = () => {
-  
   // Esto se hace a modo de ejemplo, pero la lista debe de llegar filtrada desde el backend
   // Carga solamente las labores para las que hay trabajadores disponibles
 
@@ -51,17 +49,17 @@ export const ListaLabores = () => {
   });
 
   return (
-    
     // Implementacion basica, esto se debe recibir del backend
 
-    <>
+    <div className="flex flex-wrap justify-center p-4 gap-4">
       {/* Mapeamos y mostramos las labores de momento en un div */}
       {laboresDisponibles.map((labor) => {
         return (
-          // Usar ListaLaboresItem
-          <ListaLaboresItem key={labor.id} labor={labor} />
+          <div className="m-2 shadow-lg">
+            <ListaLaboresItem key={labor.id} labor={labor} />
+          </div>
         );
       })}
-    </>
+    </div>
   );
 };
