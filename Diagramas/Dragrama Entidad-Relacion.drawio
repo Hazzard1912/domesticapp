@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-11-25T22:37:14.094Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="m0ucb_HDlPxrZe5QrXbV" version="22.1.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T01:28:04.446Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="V3s7BhaHjQCY62fMPirQ" version="22.1.4" type="github">
   <diagram name="Página-1" id="cCKO2vU_R3Nvwjt6O_Bb">
     <mxGraphModel dx="816" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -91,14 +91,17 @@
         <mxCell id="8-Lv-CJE16GWGZzQea9U-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=ERoneToMany;endFill=0;strokeWidth=2;" parent="1" source="8-Lv-CJE16GWGZzQea9U-6" target="8-Lv-CJE16GWGZzQea9U-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="8-Lv-CJE16GWGZzQea9U-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeWidth=2;" parent="1" source="8-Lv-CJE16GWGZzQea9U-6" target="8-Lv-CJE16GWGZzQea9U-8" edge="1">
+        <mxCell id="8-Lv-CJE16GWGZzQea9U-31" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;strokeWidth=2;" parent="1" source="8-Lv-CJE16GWGZzQea9U-6" target="8-Lv-CJE16GWGZzQea9U-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_5Z4qYRN5UY5JMDbhOnx-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="1" source="8-Lv-CJE16GWGZzQea9U-6" target="_5Z4qYRN5UY5JMDbhOnx-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="8-Lv-CJE16GWGZzQea9U-6" value="Realiza" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="140" y="490" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="8-Lv-CJE16GWGZzQea9U-8" value="Precio" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="300" y="502.5" width="70" height="35" as="geometry" />
+          <mxGeometry x="290" y="550" width="70" height="35" as="geometry" />
         </mxCell>
         <mxCell id="8-Lv-CJE16GWGZzQea9U-46" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;strokeWidth=2;" parent="1" source="8-Lv-CJE16GWGZzQea9U-13" target="zTk_jniPwo0BafnFYXpP-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -132,6 +135,9 @@
         </mxCell>
         <mxCell id="8-Lv-CJE16GWGZzQea9U-23" value="Calificación" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="385" y="567.5" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_5Z4qYRN5UY5JMDbhOnx-1" value="Unidad" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=16;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="290" y="470" width="70" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
