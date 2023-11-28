@@ -17,7 +17,7 @@ h2 {
   font-size: 4rem;
   letter-spacing: 0.1rem;
   font-weight: 400;
-  color: rgb(250, 150, 20)
+  color: rgb(250, 150, 20);
 }
 
 .hero_container {
@@ -421,14 +421,13 @@ label {
   position: relative;
   font-size: 2rem;
   padding: 1rem 2rem;
-  color: var(--secondary-color);
+  color: rgb(250, 150, 20);
   transition: all 0.3s ease-in-out;
 }
 
 .faq_button:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2);
-  color: var(--accent-color-light);
 }
 
 .faq_button:active {
