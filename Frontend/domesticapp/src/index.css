@@ -7,19 +7,18 @@
   padding: 0;
 }
 
+
 html {
   font-size: 62.5%;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-h2 {
-  font-size: 2.4rem;
-}
 
 :root {
+  --primary-color: #f5f6f7;
+  --secondary-color: #2d82c9;
+  --accent-color-light: #6aa5d5;
+  --accent-color-dark: #795f74;
+  --background-color: #20212f;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;

@@ -1,0 +1,619 @@
+h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+h2 {
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: var(--accent-color-light);
+}
+
+.hero_h2 {
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: rgb(250, 150, 20)
+}
+
+.hero_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero_section {
+  background-color: var(--primary-color);
+  /* image with a dark filter to left */
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url(/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_paragraph {
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  max-width: 80rem;
+  margin-bottom: 2rem;
+}
+
+.hero_button_container {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: center;
+}
+
+.button_primary {
+  position: relative;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_primary:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.button_primary:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* pseudo element with the same dimentions that the button, behind, that grows and dissapear on hover */
+.button_primary::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_primary:hover::after {
+  transform: scale(1.4);
+  opacity: 0;
+}
+
+.button_secondary {
+  position: relative;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_secondary:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.button_secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* pseudo element with the same dimentions that the button, behind, that grows and dissapear on hover */
+
+.button_secondary::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--background-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_secondary:hover::after {
+  transform: scale(1.4);
+  opacity: 0;
+}
+
+.services_section {
+  min-height: 80vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6rem;
+}
+
+.services_container {
+  display: flex;
+  padding-top: 4rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heading_2 {
+  position: relative;
+  z-index: 2;
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 5rem;
+  padding: 1rem;
+  margin: 4rem 0;
+}
+
+/* an absolute positioned pseudo element that looks like a skewed border at the bottom of the heading_2 */
+.heading_2::after {
+  content: "";
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.5rem;
+  width: 20%;
+  background-color: var(--secondary-color);
+  z-index: 1;
+  transition: all 1s ease-out;
+}
+
+.heading_2:hover::after {
+  width: 50%;
+}
+
+.services_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  justify-items: center;
+}
+
+.service_desc {
+  font-size: 2.5rem;
+  color: var(--accent-color-dark);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon {
+  font-size: 8rem;
+  color: var(--accent-color-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.service_desc:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.service_desc:hover > .icon {
+  transform: scale(1.05);
+}
+
+.heading_3 {
+  position: relative;
+  padding-left: 1rem;
+  z-index: 2;
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+/* a pseudo element that is a background for the heading, with the secondary colot*/
+.heading_3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary-color);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  z-index: -1;
+  transition: all 1s ease-out;
+}
+
+.service_paragraph {
+  font-size: 2.2rem;
+  color: var(--background-color);
+  max-width: 90%;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Testimonials */
+.testimonial_section {
+  min-height: 80vh;
+  background: url("/testimonials.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.testimonial_container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.5rem solid var(--accent-color-dark);
+}
+
+.heading_2_testimonial {
+  position: relative;
+  text-transform: capitalize;
+  z-index: 2;
+  color: var(--accent-color-dark);
+  text-align: center;
+  font-size: 5rem;
+  padding: 1rem;
+  margin: 4rem 0;
+}
+
+.testimonial_grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  justify-items: center;
+}
+
+.testimonial_desc {
+  position: relative;
+  font-size: 2.5rem;
+  color: var(--accent-color-dark);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial_desc::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  height: 0.3rem;
+  width: 90%;
+  background-color: var(--accent-color-dark);
+  z-index: 1;
+}
+
+.testimonial_paragraph {
+  font-size: 2.5rem;
+  color: var(--background-color);
+  max-width: 80%;
+  transition: all 0.3s ease-in-out;
+}
+
+.heading_3_testimonial {
+  position: relative;
+  padding-left: 1rem;
+  z-index: 2;
+  color: var(--background-color);
+  text-decoration: overline;
+  font-size: 3rem;
+}
+
+/* FAQ */
+.faq_section {
+  min-height: 80vh;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.faq_container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.heading_2_faq {
+  position: relative;
+  display: inline;
+  z-index: 2;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 5rem;
+  padding: 1rem;
+  margin: 6rem 0;
+}
+
+.icon_faq {
+  display: inline;
+  margin-left: 2rem;
+  font-size: 8rem;
+  transform: rotate(20deg);
+}
+
+.question {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  font-size: 2.2rem;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.question::after {
+  content: "+";
+  position: absolute;
+  font-size: 3.5rem;
+  right: 2rem;
+  top: 0;
+  pointer-events: none;
+}
+
+.answer {
+  display: none;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.question:hover {
+  background-color: #e0e0e0;
+  color: var(--background-color);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + label + .answer {
+  display: block;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+}
+
+.faq_button_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.faq_button {
+  position: relative;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.faq_button:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2);
+  color: var(--accent-color-light);
+}
+
+.faq_button:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.2);
+}
+
+.faq_button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.5s ease-in-out;
+}
+
+.faq_button:hover::after {
+  width: 100%;
+}
+
+.faq_button_icon {
+  display: inline;
+  margin-left: 1rem;
+  color: var(--primary-color);
+}
+
+/* Footer */
+.footer_section {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.footer_grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  justify-items: center;
+  padding: 2rem;
+}
+
+.footer_desc {
+  font-size: 1.8rem;
+  color: var(--accent-color-dark);
+}
+
+.heading_3_footer {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.footer_paragraph span {
+  font-size: 1.8rem;
+  color: var(--accent-color-dark);
+  margin-left: 1rem;
+  display: block;
+}
+
+.footer_paragraph span:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.footer_paragraph a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer_paragraph a:hover {
+  color: var(--background-color);
+}
+
+.footer_icon {
+  font-size: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer_grid::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.2rem;
+  width: 90%;
+  background-color: var(--accent-color-dark);
+  z-index: 1;
+}
+
+.footer_end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.footer_end p {
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, .5)
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 1000px) {
+  .services_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero_section {
+    justify-content: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .hero_paragraph {
+    font-size: 2.2rem;
+  }
+
+  .hero_button_container {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .button_primary,
+  .button_secondary {
+    font-size:2rem;
+  }
+
+  .footer_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .hero_section {
+    padding: 3rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero_paragraph {
+    font-size: 1.5rem;
+  }
+
+  .hero_button_container {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .button_primary,
+  .button_secondary {
+    width: 80%;
+    font-size: 2rem;
+  }
+
+  .services_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

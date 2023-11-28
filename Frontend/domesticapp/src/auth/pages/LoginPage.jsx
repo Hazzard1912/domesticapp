@@ -28,7 +28,7 @@ export const LoginPage = () => {
         validationSchema={Yup.object({
           email: Yup.string()
             .email("Invalid email address")
-            .required("Requiredo"),
+            .required("Requerido"),
           phone: Yup.string()
             .matches(/^(\d{10})$/, "Invalid phone number")
             .required("Ingrese un número de teléfono válido"),
