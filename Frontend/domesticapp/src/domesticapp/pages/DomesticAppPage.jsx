@@ -3,6 +3,7 @@ import { ListaLabores } from "../components/ListaLabores";
 import { DomesticAppLayout } from "../layout/DomesticAppLayout";
 
 import "../styles/DomesticAppPage.css";
+import { Search } from "../components/Search";
 
 export const DomesticAppPage = () => {
   return (
@@ -10,15 +11,7 @@ export const DomesticAppPage = () => {
       <div className="flex flex-col items-center justify-center min-h-screen p-4">
         <h1 className="domesticapp_title">Domesticapp</h1>
         {/* search box */}
-        <div className="search_container">
-          <input
-            type="text"
-            placeholder="Buscar un servicio"
-            className="search_box"
-          />
-          <FaSearch className="search_icon"/>
-          
-        </div>
+        <Search />
         <div className="w-full">
           <ListaLabores />
         </div>

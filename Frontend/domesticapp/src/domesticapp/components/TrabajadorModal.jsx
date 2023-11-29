@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Modal from "react-modal";
 
+import "../styles/TrabajadorModal.css";
+
 Modal.setAppElement("#root");
 
 export const TrabajadorModal = ({ trabajadorId, isOpen, onClose }) => {
@@ -52,22 +54,19 @@ export const TrabajadorModal = ({ trabajadorId, isOpen, onClose }) => {
         },
       }}
     >
-      <div className="bg-white rounded-lg">
-        <h2 className="block text-gray-700 text-2xl font-bold mb-2">
-          Descripcion del trabajo
-        </h2>
+      <div className="modal_container">
+        <h2 className="modal_title">Descripcion del trabajo</h2>
         <textarea
           value={descripcion}
           onChange={(e) => setDescripcion(e.target.value)}
-          className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none text-lg"
+          className="w-full px-3 py-2 text-white border rounded-lg focus:outline-none text-xl"
           rows="4"
         />
-        <button
-          onClick={agregarDescripcion}
-          className="px-4 py-2 rounded text-white bg-blue-500 hover:bg-blue-700 block text-xl mt-2"
-        >
-          Contratar
-        </button>
+        <div className="flex justify-end">
+          <button onClick={agregarDescripcion} className="modal_button">
+            Contratar
+          </button>
+        </div>
       </div>
     </Modal>
   );

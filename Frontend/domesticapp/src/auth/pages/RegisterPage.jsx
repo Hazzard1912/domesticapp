@@ -89,18 +89,21 @@ export const RegisterPage = () => {
               name="address"
               component="div"
             />
-
-            <Field
-              className="file-input file-input-bordered w-full text-2xl"
-              name="file"
-              type="file"
-              accept=".pdf"
-            />
-            <ErrorMessage
-              className="text-lg text-red-500"
-              name="file"
-              component="div"
-            />
+            <div className="flex justify-between">
+              <label htmlFor="file" className="text-2xl mt-2">Recibo de servicios</label>
+              <Field
+                className="file-input file-input-bordered w-1/2 text-2xl"
+                name="file"
+                type="file"
+                accept=".pdf"
+                placeholder="Documento de identidad"
+              />
+              <ErrorMessage
+                className="text-lg text-red-500"
+                name="file"
+                component="div"
+              />
+            </div>
 
             <Field
               className="input input-bordered w-full text-2xl"
@@ -130,9 +133,15 @@ export const RegisterPage = () => {
               as="select"
               name="paymentMethod"
             >
-              <option value="" className="text-xl">Selecciona un método de pago</option>
-              <option value="creditCard" className="text-xl">Tarjeta crédito</option>
-              <option value="debitCard" className="text-xl">Tarjeta débito</option>
+              <option value="" className="text-xl">
+                Selecciona un método de pago
+              </option>
+              <option value="creditCard" className="text-xl">
+                Tarjeta crédito
+              </option>
+              <option value="debitCard" className="text-xl">
+                Tarjeta débito
+              </option>
             </Field>
             <ErrorMessage
               className="text-lg text-red-500"

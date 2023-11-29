@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ccc;
+  background-color: var(--primary-color);
 }
 
 .trabajador_title {
@@ -23,7 +24,6 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--accent-color-light);
-  background-color: transparent;
   border: 1px solid var(--accent-color-light);
   border-radius: 5px;
   padding: 0.5rem 1rem;

@@ -55,8 +55,8 @@ export const ListaLabores = () => {
       {/* Mapeamos y mostramos las labores de momento en un div */}
       {laboresDisponibles.map((labor) => {
         return (
-          <div className="m-2 max-w-2xl shadow-lg rounded-xl">
-            <ListaLaboresItem key={labor.id} labor={labor} />
+          <div key={labor.id}  className="m-2 max-w-2xl shadow-lg rounded-xl">
+            <ListaLaboresItem labor={labor} />
           </div>
         );
       })}

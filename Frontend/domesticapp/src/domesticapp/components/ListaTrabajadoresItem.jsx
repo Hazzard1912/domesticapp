@@ -29,7 +29,8 @@ export const ListaTrabajadoresItem = ({ trabajador }) => {
           
           <p className="text-slate-700 text-2xl">
             Calificación
-            <div className="inline-flex ml-4">
+          </p>
+            <div className="flex">
               {[...Array(5)].map((star, i) => {
                 const ratingValue = i + 1;
                 return (
@@ -56,7 +57,7 @@ export const ListaTrabajadoresItem = ({ trabajador }) => {
                 );
               })}
             </div>
-          </p>
+          
           <button
             className="trabajador_btn"
             onClick={seleccionarTrabajador}

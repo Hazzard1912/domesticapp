@@ -66,7 +66,7 @@ export const TrabajadoresLaborPage = () => {
 
   return (
     <DomesticAppLayout>
-      <div className="min-h-screen p-4 bg-gray-200">
+      <div className="min-h-screen p-4">
         <div className="w-full max-w-6xl mx-auto flex flex-col justify-center">
           <h1 className="trabajadores_title">
             Labor {id}

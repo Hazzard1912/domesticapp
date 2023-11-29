@@ -8,11 +8,8 @@ export const ListaTrabajadores = ({ trabajadores }) => {
       {/* Mapeamos los trabajadores y los mostrariamos en un componente */}
       {trabajadores.map((trabajador) => {
         return (
-          <div className="m-2 shadow-lg">
-            <ListaTrabajadoresItem
-              key={trabajador.id}
-              trabajador={trabajador}
-            />
+          <div className="m-2 shadow-lg" key={trabajador.id}>
+            <ListaTrabajadoresItem trabajador={trabajador} />
           </div>
         );
       })}
