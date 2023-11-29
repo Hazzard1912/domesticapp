@@ -1,15 +1,15 @@
 import {
   FaArrowRight,
   FaClock,
-  FaGithub,
   FaHome,
-  FaLink,
-  FaLinkedin,
   FaQuestionCircle,
   FaRegHandshake,
 } from "react-icons/fa";
 import "../styles/HomePage.css";
 import { ButtonToTop } from "../components/ButtonToTop";
+import { Link } from "react-router-dom";
+
+import { Footer } from "../components/Footer";
 
 export const HomePage = () => {
   return (
@@ -22,14 +22,20 @@ export const HomePage = () => {
         <div className="container">
           <div className="hero_container">
             <h1>Domesticapp</h1>
-            <h2 className="hero_h2">Simplificando tu vida, un servicio a la vez</h2>
+            <h2 className="hero_h2">
+              Simplificando tu vida, un servicio a la vez
+            </h2>
             <p className="hero_paragraph">
               Encuentra Profesionales para Servicios Domésticos con un Solo
               Toque
             </p>
             <div className="hero_button_container">
-              <button className="button_primary">Ingresa</button>
-              <button className="button_secondary">Registrate</button>
+              <button className="button_primary">
+                <Link to="/auth/login">Ingresa</Link>
+              </button>
+              <button className="button_secondary">
+                <Link to="/auth/register-user">Registrate</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -135,17 +141,17 @@ export const HomePage = () => {
       {/* FAQ section */}
       <section className="faq_section">
         <div className="container">
-          <div class="faq_container">
+          <div className="faq_container">
             <h2 className="heading_2_faq">
               Preguntas Frecuentes
               <FaQuestionCircle className="icon_faq" />
             </h2>
-            <div class="question">
+            <div className="question">
               <input type="checkbox" id="question1" />
-              <label for="question1">
+              <label htmlFor="question1">
                 ¿Cuáles son los beneficios de utilizar DomesticApp?
               </label>
-              <div class="answer">
+              <div className="answer">
                 <p>
                   DomesticApp ofrece numerosos beneficios, incluyendo la
                   facilidad de encontrar profesionales para servicios
@@ -156,12 +162,12 @@ export const HomePage = () => {
               </div>
             </div>
 
-            <div class="question">
+            <div className="question">
               <input type="checkbox" id="question2" />
-              <label for="question2">
+              <label htmlFor="question2">
                 ¿Cómo puedo registrarme como profesional en DomesticApp?
               </label>
-              <div class="answer">
+              <div className="answer">
                 <p>
                   Registrarte como profesional en DomesticApp es sencillo.
                   Visita nuestra página de registro, completa la información
@@ -170,13 +176,13 @@ export const HomePage = () => {
                 </p>
               </div>
             </div>
-            <div class="question">
+            <div className="question">
               <input type="checkbox" id="question3" />
-              <label for="question3">
+              <label htmlFor="question3">
                 ¿Qué tipo de servicios domésticos puedo encontrar en
                 DomesticApp?
               </label>
-              <div class="answer">
+              <div className="answer">
                 <p>
                   DomesticApp cubre una amplia gama de servicios domésticos,
                   desde limpieza y mantenimiento hasta reparaciones y mejoras en
@@ -185,13 +191,13 @@ export const HomePage = () => {
                 </p>
               </div>
             </div>
-            <div class="question">
+            <div className="question">
               <input type="checkbox" id="question4" />
-              <label for="question4">
+              <label htmlFor="question4">
                 ¿Cuál es el proceso para solicitar un servicio a través de
                 DomesticApp?
               </label>
-              <div class="answer">
+              <div className="answer">
                 <p>
                   Solicitar un servicio en DomesticApp es fácil. Inicia sesión
                   en la aplicación, selecciona el servicio que necesitas, elige
@@ -201,13 +207,13 @@ export const HomePage = () => {
                 </p>
               </div>
             </div>
-            <div class="question">
+            <div className="question">
               <input type="checkbox" id="question5" />
-              <label for="question5">
+              <label htmlFor="question5">
                 ¿Cómo se garantiza la seguridad y confidencialidad de la
                 información en DomesticApp?
               </label>
-              <div class="answer">
+              <div className="answer">
                 <p>
                   La seguridad y confidencialidad son nuestras principales
                   prioridades. Utilizamos medidas de encriptación avanzadas para
@@ -229,60 +235,7 @@ export const HomePage = () => {
       {/* end */}
 
       {/* Footer section */}
-      <footer className="footer_section">
-        <div className="container">
-          <div className="footer_container">
-            <div className="footer_grid">
-              <div className="footer_desc">
-                <h3 className="heading_3_footer">DomesticApp Logo</h3>
-              </div>
-              <div className="footer_desc">
-                <h3 className="heading_3_footer">Contacto</h3>
-                <p className="footer_paragraph">
-                  <span>
-                    <a href="">Email</a>
-                  </span>
-                  <span>
-                    <a href="">Telefono</a>
-                  </span>
-                  <span>
-                    <a href="">Precio</a>
-                  </span>
-                  <span>
-                    <a href="">Ayuda</a>
-                  </span>
-                </p>
-              </div>
-              <div className="footer_desc">
-                <h3 className="heading_3_footer">Enlaces</h3>
-                <p className="footer_paragraph">
-                  <span>
-                    <a href="">
-                      <FaGithub className="footer_icon" />
-                    </a>
-                  </span>
-                  <span>
-                    <a href="">
-                      <FaLinkedin className="footer_icon" />
-                    </a>
-                  </span>
-                  <span>
-                    <a href="">
-                      <FaLink className="footer_icon" />
-                    </a>
-                  </span>
-                </p>
-              </div>
-            </div>
-            <div className="footer_end">
-              <p>
-                © 2023 by DomesticApp. Proudly created with React. All Rights
-                Reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </main>
   );
 };

@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { Navigate, Route, Routes } from "react-router-dom";
+import { HomePage } from "../domesticapp/pages/HomePage";
 import { DomesticAppRoutes } from "../domesticapp/routes/DomesticAppRoutes";
 import { AuthRoutes } from "../auth/routes/AuthRoutes";
-import { LoginPage } from "../auth/pages";
 
 export const AppRouter = () => {
   const { status } = useSelector((state) => state.user);
@@ -10,12 +10,18 @@ export const AppRouter = () => {
   return (
     <Routes>
       {status === "authenticated" ? (
-        <Route path="/*" element={<DomesticAppRoutes />} />
+        <>
+          <Route path="/domesticapp/*" element={<DomesticAppRoutes />} />
+          <Route path="/*" element={<Navigate to="/domesticapp" />} />
+        </>
       ) : (
-        <Route path="/auth/*" element={<AuthRoutes />} />
+        <>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/auth/*" element={<AuthRoutes />} />
+          <Route path="/*" element={<Navigate to="/auth/login" />} />
+        </>
       )}
 
-      <Route path="/*" element={<Navigate to="/auth/login" />} />
     </Routes>
   );
 };

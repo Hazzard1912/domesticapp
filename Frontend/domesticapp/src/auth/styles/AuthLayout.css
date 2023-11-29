@@ -1,0 +1,14 @@
+
+.auth_title {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.auth_section {
+  background: url("/auth.jpg");
+  background-size: cover;
+  background-position: center;
+}

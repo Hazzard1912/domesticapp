@@ -13,25 +13,28 @@ export const LoginPage = () => {
 
   const handleLogin = (values) => {
     // TODO: Hacer el login con el servidor de manera robusta, recibir jwt.
-    const { email, phone } = values;
+    const { phone, password } = values;
+
+    // TODO: Hacer el login con el servidor de manera robusta, recibir jwt.
+
+    // TODO: enviar el jwt al store
     const status = "authenticated";
-    dispatch(login({ email, phone, status }));
+    dispatch(login({ phone, status }));
   };
 
   return (
-    <AuthLayout title="Login">
+    <AuthLayout title="Ingresa">
       <Formik
         initialValues={{
-          email: "",
           phone: "",
+          password: "",
         }}
         validationSchema={Yup.object({
-          email: Yup.string()
-            .email("Invalid email address")
-            .required("Requerido"),
           phone: Yup.string()
             .matches(/^(\d{10})$/, "Invalid phone number")
             .required("Ingrese un número de teléfono válido"),
+            password: Yup.string()
+            .required("Requerido"),
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -42,35 +45,35 @@ export const LoginPage = () => {
       >
         <Form className="card-body">
           <Field
-            name="email"
-            type="email"
-            placeholder="Email"
-            className="input input-bordered w-full"
-          />
-          <ErrorMessage className="text-lg text-red-500" name="email" component="div" />
-
-          <Field
             name="phone"
             type="text"
-            placeholder="Phone"
-            className="input input-bordered w-full"
+            placeholder="Telefono"
+            className="input input-bordered w-full text-xl"
           />
           <ErrorMessage className="text-lg text-red-500" name="phone" component="div" />
 
-          <button type="submit" className="btn btn-outline btn-primary text-xl">
-            Login
+          <Field
+            name="password"
+            type="password"
+            placeholder="Contraseña"
+            className="input input-bordered w-full text-xl"
+          />
+          <ErrorMessage className="text-lg text-red-500" name="password" component="div" />
+
+          <button type="submit" className="btn btn-outline btn-primary text-2xl">
+            Ingresar
           </button>
         </Form>
       </Formik>
       <div className="mt-6 text-center">
         <p className="text-xl">
-          Are you a new user?{" "}
-          <Link to="/auth/register-user" className="font-medium text-indigo-400 hover:text-indigo-200">Register here</Link>
+          No tienes cuenta aún?
+          <Link to="/auth/register-user" className="font-medium ml-4 text-indigo-400 hover:text-indigo-200">Registrate aquí</Link>
         </p>
-        <p className="text-xl mt-2">
-          Are you a worker?{" "}
+        {/* <p className="text-xl mt-2">
+          Are you a worker?
           <Link to="/auth/register-worker" className="font-medium text-indigo-400 hover:text-indigo-200">Register here</Link>
-        </p>
+        </p> */}
       </div>
     </AuthLayout>
   );

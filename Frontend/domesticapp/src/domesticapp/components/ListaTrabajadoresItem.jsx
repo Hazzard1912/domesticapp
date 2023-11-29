@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { TrabajadorModal } from "./TrabajadorModal";
 
+import "../styles/ListaTrabajadoresItem.css"
+
 // Al ser seleccionado un trabajador, se debe mostrar un modal con la descripcion del trabajo a realizar (que sera opcional)
 
 export const ListaTrabajadoresItem = ({ trabajador }) => {
@@ -13,30 +15,25 @@ export const ListaTrabajadoresItem = ({ trabajador }) => {
   };
 
   return (
-    <div className="card w-96 bg-base-100 shadow-xl hover:text-white">
+    <div className="trabajador_container">
       <figure>
         <img src="/trabajador.png" alt="Imagen del trabajador" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title capitalize text-2xl">
+        <h2 className="trabajador_title">
           {trabajador.nombre} {trabajador.apellido}
         </h2>
-        <p className="text-xl">{trabajador.labor}</p>
-        <div className="card-actions flex items-center justify-between">
+        <p className="trabajador_labor">{trabajador.labor}</p>
+        <div className="card-actions flex flex-col">
           {/* boton buscar, para redirigir a TrabajadoresLaborPage */}
-          <button
-            className="btn btn-success text-xl"
-            onClick={seleccionarTrabajador}
-          >
-            Seleccionar
-          </button>
-          <p className="text-xl">
-            {trabajador.rating}
-            <div className="flex">
+          
+          <p className="text-slate-700 text-2xl">
+            Calificación
+            <div className="inline-flex ml-4">
               {[...Array(5)].map((star, i) => {
                 const ratingValue = i + 1;
                 return (
-                  <label key={i}>
+                  <label key={i} className="cursor-default">
                     <input
                       type="radio"
                       name="rating"
@@ -60,6 +57,12 @@ export const ListaTrabajadoresItem = ({ trabajador }) => {
               })}
             </div>
           </p>
+          <button
+            className="trabajador_btn"
+            onClick={seleccionarTrabajador}
+          >
+            Seleccionar
+          </button>
         </div>
         <TrabajadorModal
           trabajadorId={trabajador.id}

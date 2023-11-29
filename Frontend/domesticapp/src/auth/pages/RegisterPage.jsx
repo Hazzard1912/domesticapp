@@ -36,7 +36,7 @@ export const RegisterPage = () => {
   };
 
   return (
-    <AuthLayout title="Register User">
+    <AuthLayout title="Registro">
       <Formik
         initialValues={{
           firstName: "",
@@ -55,77 +55,107 @@ export const RegisterPage = () => {
         <Form className="card-body">
           <div className="form-control w-full flex gap-4">
             <Field
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-2xl"
               name="firstName"
               type="text"
-              placeholder="First Name"
+              placeholder="Nombre"
             />
-            <ErrorMessage className="text-lg text-red-500" name="firstName" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="firstName"
+              component="div"
+            />
 
             <Field
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-2xl"
               name="lastName"
               type="text"
-              placeholder="Last Name"
+              placeholder="Apellidos"
             />
-            <ErrorMessage className="text-lg text-red-500" name="lastName" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="lastName"
+              component="div"
+            />
 
             <Field
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-2xl"
               name="address"
               type="text"
-              placeholder="Address"
+              placeholder="Dirección de residencia"
             />
-            <ErrorMessage className="text-lg text-red-500" name="address" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="address"
+              component="div"
+            />
 
             <Field
-              className="file-input file-input-bordered w-full"
+              className="file-input file-input-bordered w-full text-2xl"
               name="file"
               type="file"
               accept=".pdf"
             />
-            <ErrorMessage className="text-lg text-red-500" name="file" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="file"
+              component="div"
+            />
 
             <Field
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-2xl"
               name="email"
               type="text"
-              placeholder="Email"
+              placeholder="Correo electrónico"
             />
-            <ErrorMessage className="text-lg text-red-500" name="email" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="email"
+              component="div"
+            />
 
             <Field
-              className="input input-bordered w-full"
+              className="input input-bordered w-full text-2xl"
               name="phone"
               type="text"
-              placeholder="Phone"
+              placeholder="Teléfono"
             />
-            <ErrorMessage className="text-lg text-red-500" name="phone" component="div" />
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="phone"
+              component="div"
+            />
             <Field
-              className="select select-bordered"
+              className="select select-bordered text-xl"
               as="select"
               name="paymentMethod"
             >
-              <option value="">Select a payment method</option>
-              <option value="creditCard">Credit Card</option>
-              <option value="debitCard">Debit Card</option>
-              <option value="paypal">PayPal</option>
+              <option value="" className="text-xl">Selecciona un método de pago</option>
+              <option value="creditCard" className="text-xl">Tarjeta crédito</option>
+              <option value="debitCard" className="text-xl">Tarjeta débito</option>
             </Field>
-            <ErrorMessage className="text-lg text-red-500" name="paymentMethod" component="div" />
-            <button type="submit" className="btn btn-outline btn-primary text-xl">
-              Register
+            <ErrorMessage
+              className="text-lg text-red-500"
+              name="paymentMethod"
+              component="div"
+            />
+            <button
+              type="submit"
+              className="btn btn-outline btn-primary text-2xl"
+            >
+              Registrarse
             </button>
           </div>
         </Form>
       </Formik>
       <div className="mt-6 text-center">
         <p className="text-xl">
-          Do you have an account?{" "}
+          Ya tienes una cuenta?
           <Link
             to="/auth/login"
-            className="font-medium text-indigo-400 hover:text-indigo-200"
+            className="font-medium ml-4 text-indigo-400 hover:text-indigo-200"
           >
-            Go to login
+            Ingresar
           </Link>
         </p>
       </div>

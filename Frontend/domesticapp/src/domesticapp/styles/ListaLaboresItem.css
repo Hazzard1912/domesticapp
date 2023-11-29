@@ -1,0 +1,68 @@
+.card_title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.labor_card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.labor_img {
+  transition: all 0.5s ease-in-out;
+}
+
+.labor_img:hover {
+  transform: scale(1.1);
+}
+
+.button_lista_labores {
+  position: relative;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_lista_labores:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.button_lista_labores:active {
+  transform: translateY(0);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* pseudo element with the same dimentions that the button, behind, that grows and dissapear on hover */
+.button_lista_labores::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_lista_labores:hover::after {
+  transform: scale(1.4);
+  opacity: 0;
+}

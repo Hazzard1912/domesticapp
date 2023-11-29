@@ -1,0 +1,11 @@
+.nav_logo {
+    font-size: 2rem;
+    color: var(--accent-color-light);
+}
+
+.app_layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}

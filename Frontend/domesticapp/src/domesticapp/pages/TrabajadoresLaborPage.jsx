@@ -3,6 +3,9 @@ import { ListaTrabajadores } from "../components/ListaTrabajadores";
 import { useEffect, useState } from "react";
 import { DomesticAppLayout } from "../layout/DomesticAppLayout";
 
+import "../styles/TrabajadoresLaborPage.css";
+import { FaDirections, FaDollarSign, FaMoneyBill, FaStar } from "react-icons/fa";
+
 export const TrabajadoresLaborPage = () => {
   const { id } = useParams();
 
@@ -65,12 +68,13 @@ export const TrabajadoresLaborPage = () => {
     <DomesticAppLayout>
       <div className="min-h-screen p-4 bg-gray-200">
         <div className="w-full max-w-6xl mx-auto flex flex-col justify-center">
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-sky-600 mb-8 text-center">
+          <h1 className="trabajadores_title">
             Labor {id}
           </h1>
           <div role="tablist" className="tabs tabs-bordered">
             <a role="tab" className={`tab text-xl text-slate-600 capitalize ${criterio === "rating" ? "tab-active" : ""}`} onClick={() => setCriterio("rating")}>
               Mejor rating
+              <FaStar className="ml-4"/>
             </a>
             <a
               role="tab"
@@ -78,9 +82,11 @@ export const TrabajadoresLaborPage = () => {
               onClick={() => setCriterio("distancia")}
             >
               Menor distancia
+              <FaDirections className="ml-4"/>
             </a>
             <a role="tab" className={`tab text-xl text-slate-600 capitalize ${criterio === "precio" ? "tab-active" : ""}`} onClick={() => setCriterio("precio")}>
               Mejor precio
+              <FaDollarSign className="ml-4"/>
             </a>
           </div>
           <ListaTrabajadores trabajadores={trabajadores} />
