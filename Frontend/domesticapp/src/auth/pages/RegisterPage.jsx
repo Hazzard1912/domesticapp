@@ -90,19 +90,23 @@ export const RegisterPage = () => {
               component="div"
             />
             <div className="flex justify-between">
-              <label htmlFor="file" className="text-2xl mt-2">Recibo de servicios</label>
-              <Field
-                className="file-input file-input-bordered w-1/2 text-2xl"
-                name="file"
-                type="file"
-                accept=".pdf"
-                placeholder="Documento de identidad"
-              />
-              <ErrorMessage
-                className="text-lg text-red-500"
-                name="file"
-                component="div"
-              />
+              <label htmlFor="file" className="text-2xl mt-2 w-full">
+                Recibo
+              </label>
+              <div className="flex flex-col items-end justify-center">
+                <Field
+                  className="file-input file-input-bordered w-1/2 text-2xl"
+                  name="file"
+                  type="file"
+                  accept=".pdf"
+                  placeholder="Documento de identidad"
+                />
+                <ErrorMessage
+                  className="text-lg text-red-500"
+                  name="file"
+                  component="div"
+                />
+              </div>
             </div>
 
             <Field
