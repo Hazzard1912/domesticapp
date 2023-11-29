@@ -48,7 +48,7 @@
 
 .footer_paragraph a {
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .footer_paragraph a:hover {
@@ -57,7 +57,7 @@
 
 .footer_icon {
   font-size: 3rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .footer_grid::after {
