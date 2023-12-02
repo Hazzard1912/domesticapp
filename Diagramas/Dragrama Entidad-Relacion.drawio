@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-02T16:08:08.040Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="ZuqUGaU4rUSalcgdkL-k" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-02T16:21:43.283Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="VSkoupBs2N1SPAwJp2lX" version="22.1.5" type="github">
   <diagram name="Página-1" id="cCKO2vU_R3Nvwjt6O_Bb">
     <mxGraphModel dx="1639" dy="1651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -303,7 +303,7 @@
         <mxCell id="LQz_tbbz-LuxJvh1qZ6F-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;endArrow=none;endFill=0;" edge="1" parent="1" source="LQz_tbbz-LuxJvh1qZ6F-1" target="LQz_tbbz-LuxJvh1qZ6F-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LQz_tbbz-LuxJvh1qZ6F-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;endArrow=none;endFill=0;" edge="1" parent="1" source="LQz_tbbz-LuxJvh1qZ6F-1" target="LQz_tbbz-LuxJvh1qZ6F-7">
+        <mxCell id="LQz_tbbz-LuxJvh1qZ6F-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;endArrow=none;endFill=0;" edge="1" parent="1" source="LQz_tbbz-LuxJvh1qZ6F-1" target="LQz_tbbz-LuxJvh1qZ6F-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LQz_tbbz-LuxJvh1qZ6F-1" value="Usuario" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
@@ -334,13 +334,13 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="LQz_tbbz-LuxJvh1qZ6F-7" value="Es" style="triangle;whiteSpace=wrap;html=1;strokeWidth=2;rotation=90;fontSize=16;horizontal=0;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="20" width="60" height="80" as="geometry" />
+          <mxGeometry x="1315" y="20" width="60" height="80" as="geometry" />
         </mxCell>
         <mxCell id="LQz_tbbz-LuxJvh1qZ6F-15" value="&lt;div&gt;Cliente&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="1175" y="150" width="100" height="40" as="geometry" />
+          <mxGeometry x="1200" y="150" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LQz_tbbz-LuxJvh1qZ6F-16" value="Profesional" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="1365" y="150" width="100" height="40" as="geometry" />
+          <mxGeometry x="1390" y="150" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="LQz_tbbz-LuxJvh1qZ6F-19" value="Medio de Pago" style="whiteSpace=wrap;html=1;align=center;strokeWidth=2;fontSize=16;" vertex="1" parent="1">
           <mxGeometry x="1690" y="-120" width="100" height="40" as="geometry" />
