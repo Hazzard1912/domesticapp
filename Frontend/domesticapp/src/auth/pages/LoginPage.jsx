@@ -5,6 +5,8 @@ import { AuthLayout } from "../layout/AuthLayout";
 import { useDispatch } from "react-redux";
 import { login } from "../../store/slices/user/userSlice";
 
+import { login as login_backend } from "../../helpers/login";
+
 // Formulario de login
 
 export const LoginPage = () => {
@@ -14,6 +16,10 @@ export const LoginPage = () => {
   const handleLogin = (values) => {
     // TODO: Hacer el login con el servidor de manera robusta, recibir jwt.
     const { phone, password } = values;
+
+    login_backend(phone, password);
+
+    return;
 
     // TODO: Hacer el login con el servidor de manera robusta, recibir jwt.
 
@@ -33,8 +39,7 @@ export const LoginPage = () => {
           phone: Yup.string()
             .matches(/^(\d{10})$/, "Invalid phone number")
             .required("Ingrese un número de teléfono válido"),
-            password: Yup.string()
-            .required("Requerido"),
+          password: Yup.string().required("Requerido"),
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -50,7 +55,11 @@ export const LoginPage = () => {
             placeholder="Telefono"
             className="input input-bordered w-full text-xl"
           />
-          <ErrorMessage className="text-lg text-red-500" name="phone" component="div" />
+          <ErrorMessage
+            className="text-lg text-red-500"
+            name="phone"
+            component="div"
+          />
 
           <Field
             name="password"
@@ -58,9 +67,16 @@ export const LoginPage = () => {
             placeholder="Contraseña"
             className="input input-bordered w-full text-xl"
           />
-          <ErrorMessage className="text-lg text-red-500" name="password" component="div" />
+          <ErrorMessage
+            className="text-lg text-red-500"
+            name="password"
+            component="div"
+          />
 
-          <button type="submit" className="btn btn-outline btn-primary text-2xl">
+          <button
+            type="submit"
+            className="btn btn-outline btn-primary text-2xl"
+          >
             Ingresar
           </button>
         </Form>
@@ -68,7 +84,12 @@ export const LoginPage = () => {
       <div className="mt-6 text-center">
         <p className="text-xl">
           No tienes cuenta aún?
-          <Link to="/auth/register-user" className="font-medium ml-4 text-indigo-400 hover:text-indigo-200">Registrate aquí</Link>
+          <Link
+            to="/auth/register-user"
+            className="font-medium ml-4 text-indigo-400 hover:text-indigo-200"
+          >
+            Registrate aquí
+          </Link>
         </p>
         {/* <p className="text-xl mt-2">
           Are you a worker?
