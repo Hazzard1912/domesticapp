@@ -6,6 +6,7 @@ from datetime import datetime, timedelta
 # Cargarmos las variables de entorno
 load_dotenv()
 
+# Funcion para generar el token
 def generate_token(user_id):
     # Generamos el payload
     payload = {

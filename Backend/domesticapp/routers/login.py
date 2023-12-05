@@ -5,6 +5,8 @@ from services.token_utils import generate_token
 
 # Pendiente implementar sqlalchemy
 
+# Endpoints relacionados con el login
+
 router = APIRouter()
 
 @router.post("/auth")

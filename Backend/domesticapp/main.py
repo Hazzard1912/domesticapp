@@ -5,7 +5,7 @@ from routers import login
 
 app = FastAPI()
 
-# CORS
+# CORS, de momento solo para desarrollo
 origins = ["http://localhost:5173"]
 
 app.add_middleware(
@@ -16,8 +16,10 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+# Incluimos los routers
 app.include_router(login.router)
 
+# Endpoint de prueba
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
