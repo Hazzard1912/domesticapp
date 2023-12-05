@@ -181,7 +181,7 @@ h2 {
   width: 20%;
   background-color: var(--secondary-color);
   z-index: 1;
-  transition: all 1s ease-out;
+  transition: all .5s ease-out;
 }
 
 .heading_2:hover::after {
