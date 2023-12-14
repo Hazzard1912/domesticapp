@@ -1,12 +1,12 @@
 CREATE TABLE usuario(
     idUsuario SERIAL PRIMARY KEY NOT NULL,
     contraseña VARCHAR(30),
-    telefono VARCHAR(20),
+    telefono VARCHAR(50),
     nombre VARCHAR(50),
     apellido VARCHAR(50),
     fechaNacimiento DATE,
     recibo VARCHAR(100),
-    direccion VARCHAR(20),
+    direccion VARCHAR(50),
     email VARCHAR(50),
     fotoPerfil VARCHAR(100),
     fotoDocumento VARCHAR(100)
@@ -67,5 +67,6 @@ CREATE TABLE usuarioProfesionalServicio(
     FOREIGN KEY (codigoProfesional) REFERENCES profesional(idProfesional),
     FOREIGN KEY (codigoUsuario) REFERENCES usuario(idUsuario),
     FOREIGN KEY (codigoServicio) REFERENCES servicio(idServicio),
-    PRIMARY KEY (codigoProfesional, codigoUsuario, codigoServicio)
+    PRIMARY KEY (codigoProfesional, codigoUsuario, codigoServicio),
+    CONSTRAINT check_calif CHECK (calificacion>0 AND calificacion<=5)
 );

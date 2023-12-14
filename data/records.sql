@@ -15,10 +15,15 @@ VALUES
 
 INSERT INTO categoria(nombre, unidadTrabajo)
 VALUES
-('categoria1', 'hora'),
-('categoria2', 'hora'),
-('categoria3', 'hora'),
-('categoria4', 'm2');
+('Educación Primaria', 'hora'),
+('Educación Secundaria', 'hora'),
+('Limpieza', 'hora'),
+('Reparación', 'hora'),
+('Cuidado', 'hora'),
+('Jardinería', 'hora'),
+('Mudanza', 'dia'),
+('Catering', 'persona'),
+('Pintura', 'm2');
 
 INSERT INTO servicio(codigoCategoria, descripcion, labor)
 VALUES
