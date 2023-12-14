@@ -8,3 +8,12 @@ RETURN (
 );
 END;
 $_$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION distancia (idTrabajador INTEGER, idUsuario INTEGER) RETURNS NUMERIC AS 
+$_$
+BEGIN
+RETURN (
+    
+);
+END;
+$_$ LANGUAGE plpgsql;
