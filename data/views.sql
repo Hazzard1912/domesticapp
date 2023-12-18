@@ -1,4 +1,3 @@
--- Vista
 CREATE VIEW profesionales AS
 SELECT p.idProfesional, p.codigoUsuario, p.imagenID, p.disponibilidad, AVG(v.calificacion) AS promedioCalificacion
 FROM profesional p
