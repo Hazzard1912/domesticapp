@@ -53,7 +53,7 @@ CREATE TABLE profesionalServicio(
     codigoProfesional INT,
     codigoServicio INT,
     precio INT,
-    FOREIGN KEY (codigoProfesional) REFERENCES profesional(idProfesional),
+    FOREIGN KEY (codigoPr   ofesional) REFERENCES profesional(idProfesional),
     FOREIGN KEY (codigoServicio) REFERENCES servicio(idServicio),
     PRIMARY KEY (codigoProfesional, codigoServicio)
 );
