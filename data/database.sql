@@ -6,8 +6,8 @@ CREATE TABLE usuario(
     apellido VARCHAR(50),
     fechaNacimiento DATE,
     recibo VARCHAR(100),
-    latitud FLOAT(20, 15),
-    longitud FLOAT(20, 15),
+    latitud FLOAT(20),
+    longitud FLOAT(20),
     email VARCHAR(50),
     fotoPerfil VARCHAR(100),
     fotoDocumento VARCHAR(100)

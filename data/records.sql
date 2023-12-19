@@ -1,10 +1,10 @@
 INSERT INTO usuario(contraseña,telefono,nombre,apellido,fechaNacimiento,latitud,longitud,
 email,fotoPerfil,fotoDocumento)
 VALUES
-('contraseña1','1-414-275-2817','Mannix','Montgomery', '1995-10-01', 3.425071160714475, -76.52570131384293, 'sed.dictum@yahoo.net','http://example.com/profile-pic-1.jpg', 'http://example.com/profile-pic-2.jpg'),
-('contraseña2', '(493) 353-4031','"Rowan','Carver','1999-06-29', 3.4322680330963444, -76.48072603399139, 'sem@google.edu','http://example.com/profile-pic-3.jpg', 'http://example.com/profile-pic-4.jpg' ),
-('contraseña3', '1-970-358-7271', 'Angela', 'Norris', '1995-05-01', 3.385487397751655, -76.51814821377114, 'suscipit.nonummy@yahoo.edu', 'http://example.com/profile-pic-5.jpg', 'http://example.com/profile-pic-6.jpg' ),
-('contraseña4', '(129) 646-3008','Alexis', 'Downs', '2001-12-06', 3.2586714699746753, -76.5375459488978, 'urna.nullam@hotmail.couk','http://example.com/profile-pic-7.jpg', 'http://example.com/profile-pic-8.jpg' );
+('contraseña1','3107894125','Mannix','Montgomery', '1995-10-01', 3.425071160714475, -76.52570131384293, 'sed.dictum@yahoo.net','http://example.com/profile-pic-1.jpg', 'http://example.com/profile-pic-2.jpg'),
+('contraseña2', '3118854769','"Rowan','Carver','1999-06-29', 3.4322680330963444, -76.48072603399139, 'sem@google.edu','http://example.com/profile-pic-3.jpg', 'http://example.com/profile-pic-4.jpg' ),
+('contraseña3', '3004442514', 'Angela', 'Norris', '1995-05-01', 3.385487397751655, -76.51814821377114, 'suscipit.nonummy@yahoo.edu', 'http://example.com/profile-pic-5.jpg', 'http://example.com/profile-pic-6.jpg' ),
+('contraseña4', '3032584141','Alexis', 'Downs', '2001-12-06', 3.2586714699746753, -76.5375459488978, 'urna.nullam@hotmail.couk','http://example.com/profile-pic-7.jpg', 'http://example.com/profile-pic-8.jpg' );
 
 INSERT INTO profesional(codigoUsuario,imagenID,disponibilidad)
 VALUES
